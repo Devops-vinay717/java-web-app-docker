@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: javaappcontainers
-        image: redbull200/java-web-app:${buildnumber}
+        image: redbull200/java-web-app:IMAGEVERSION
         ports:
         - containerPort: 8080
 ---
