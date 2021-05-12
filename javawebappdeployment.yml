@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: javawebappcontainer
-          image: redbull200/java-web-app:${docker_pwd}
+          image: redbull200/java-web-app:${buildnumber}
           ports:
             - containerPort: 8080
 ---
