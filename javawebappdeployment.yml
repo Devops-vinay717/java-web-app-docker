@@ -14,7 +14,7 @@ spec:
         app: javawebapp
     spec:
       containers:
-        - name: mavenappcontainer
+        - name: javawebappcontainer
           image: redbull200/java-web-app:${docker_pwd}
           ports:
             - containerPort: 8080
@@ -22,7 +22,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mavenappservice
+  name: javawebappservice
 spec:
   type: NodePort
   selector:
