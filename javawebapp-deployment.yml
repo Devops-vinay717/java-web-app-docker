@@ -4,7 +4,6 @@ kind: ReplicationController
 metadata:
   labels:
     name: javawebapp
-  name: java-controller
 spec:
   replicas: 1
   template:
@@ -13,7 +12,7 @@ spec:
         name: javawebapp
     spec:
       containers:
-      - image: dockerhandson/java-web-app
+      - image: redbull200/java-web-app:${docker_pwd}
         name: javawebapp
         ports:
         - name: javawebapp
