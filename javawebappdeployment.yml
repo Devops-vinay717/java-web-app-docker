@@ -1,28 +1,30 @@
----
-apiVersion: v1
-kind: ReplicationController
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: javawebapprc
+  name: javawebappdeployment
 spec:
-  replicas: 3
+  strategy:
+    type: Recreate
+  replicas: 2
   selector:
-    app: javawebapp
+    matchLabels:
+      app: javawebapp 
   template:
     metadata:
-      name: javawebapppod
+      name: javapods
       labels:
         app: javawebapp
     spec:
       containers:
-        - name: javawebappcontainer
-          image: redbull200/java-web-app:${buildnumber}
-          ports:
-            - containerPort: 8080
+      - name: javaappcontainers
+        image: redbull200/java-web-app:${buildnumber}
+        ports:
+        - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: javawebappservice
+  name: javawebappsvc
 spec:
   type: NodePort
   selector:
@@ -30,4 +32,4 @@ spec:
   ports:
   - port: 80
     targetPort: 8080
----
+
