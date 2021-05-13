@@ -40,7 +40,7 @@
 
 	<div class="row">
 		<div class="col-md-8">
-			<h2>Welcome To Omkar Technologies, Gowribidanur, Chickballapur.</h2>
+			<h2>Welcome To Omkar annayya Technologies, Gowribidanur, Chickballapur.</h2>
 			<h3>Contact @ 9449314222, 9483695222</h3>
 		</div>	
 	</div>
